@@ -1,0 +1,38 @@
+{
+  "name": "node_mongodb_passportauth",
+  "version": "1.0.0",
+  "description": "jwt authentication using passport",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pranavkapoorr/node_mongodb_passportauth.git"
+  },
+  "keywords": [
+    "nodejs",
+    "passport",
+    "jwt",
+    "authentication"
+  ],
+  "author": "Pranav Kapoor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pranavkapoorr/node_mongodb_passportauth/issues"
+  },
+  "homepage": "https://github.com/pranavkapoorr/node_mongodb_passportauth#readme",
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*",
+    "bcryptjs": "*",
+    "cors": "*",
+    "jsonwebtoken": "*",
+    "body-parser": "*",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "devDependencies": {
+    "nodemon": "*"
+  }
+}
