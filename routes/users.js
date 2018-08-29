@@ -42,7 +42,7 @@ router.post('/login', (req, res, next) => {
       if(err) throw err;
       if(isMatch){
         console.log('matched password! : '+password +' - '+ user.password );
-        const token = jwt.sign(user, config.secret, {
+        const token = jwt.sign(user.toJSON(), config.secret, {
           expiresIn: 604800 //1 week
         });
 
@@ -67,7 +67,6 @@ router.post('/login', (req, res, next) => {
 //authenticatedProfile
 router.post('/profile', passport.authenticate('jwt',{session:false}), (req, res, next) => {
   res.json({user: req.user});
-
 });
 
 module.exports = router;

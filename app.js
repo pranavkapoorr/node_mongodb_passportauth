@@ -32,6 +32,7 @@ mongoose.connection.on('error', (err) => {
   
   //Body Parser Middleware
   app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded({ extended: true }));
   app.use('/users', users);
   
   //Passport Middleware
